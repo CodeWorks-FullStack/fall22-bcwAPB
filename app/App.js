@@ -1,7 +1,8 @@
-import { ValuesController } from "./Controllers/ValuesController.js";
+import { BulletinsController } from "./Controllers/BulletinsController.js";
+
 
 class App {
-  valuesController = new ValuesController();
+  bulletinsController = new BulletinsController
 }
 
 window["app"] = new App();
