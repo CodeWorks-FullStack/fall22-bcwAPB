@@ -12,6 +12,7 @@ export class BulletinsController {
     constructor() {
         console.log('hello from the bulletin controller')
         appState.on('bulletins', _draw)
+        appState.on('crimes', _draw)
         _draw()
     }
 

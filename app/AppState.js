@@ -1,4 +1,5 @@
 import { Bulletin } from "./Models/Bulletin.js"
+import { Crime } from "./Models/Crime.js"
 import { Value } from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
@@ -8,6 +9,8 @@ class AppState extends EventEmitter {
   /** @type {import('./Models/Value').Value[]} */
   values = loadState('values', Value)
   bulletins = loadState('bulletins', Bulletin)
+
+  crimes = loadState('crimes', Crime)
 }
 
 export const appState = new Proxy(new AppState(), {
